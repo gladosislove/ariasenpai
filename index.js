@@ -26,7 +26,7 @@ bot.on('ready', () => {
 bot.on('message', async message => {
     if (triggerWords.some(word => message.content.includes(word))) {
 
-        let userMessage = message.content()
+        const userMessage = message.content()
 
         bot.channels.get('554302850574974996').send(`${message.author.tag}: ${userMessage}`);
     }
