@@ -23,10 +23,11 @@ bot.on('ready', () => {
     console.log('Online.')
 });
 
-bot.on('message', async message => {
-    if (triggerWords.some(word => message.content.includes(word))) {
-        message.channel.fetchMessage()
-            .then(bot.channels.get('554302850574974996').send(`${message.author.tag} used ${word} in ${MessageChannel}`))
+bot.on('message', () => {
+    for (x = 0; x < triggerWords.length; x++) {
+        if (message.content.toUpperCase() == triggerWords[x].toUpperCase()) {
+            bot.channels.get('554302850574974996').send('Test');
+        }
     }
 });
 
