@@ -27,7 +27,7 @@ bot.on('ready', () => {
 bot.on('message', async message => {
     for (x = 0; x < triggerWords.length; x++) {
         if (message.content.toUpperCase() == triggerWords[x].toUpperCase()) {
-            bot.channels.get('556168235955912725').send(`${message.author.tag} in ${message.channel}: mentioned ${triggerWords[x]}.`);
+            bot.channels.get('556168235955912725').send(`${message.author.tag} in ${message.channel}: mentioned '${triggerWords[x]}.'`);
         }
     }
 });
