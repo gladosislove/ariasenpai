@@ -16,7 +16,8 @@ const triggerWords = ['kill myself',
     'slit',
     'blood',
     'dying',
-    'knives'
+    'knives',
+    'dead'
 ];
 
 bot.on('ready', () => {
